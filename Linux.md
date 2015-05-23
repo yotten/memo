@@ -26,6 +26,12 @@ vmlinuz-3.16.0-24-generic
 $ uname -r
 3.16.0-24-generic
 </pre>
+
+raspberry piのバージョン
+<pre>
+pi@raspberrypi ~ $ uname -r
+3.18.7+
+</pre>
 ### モジュールのファイルの場所
 <pre>
 /lib/modules/カーネルのバージョン  
