@@ -47,3 +47,24 @@ bnep                   19543  2
 ':
 </pre>
 
+### printkによるデバッグ
+printkに使用する主なメッセージレベル  
+include/linux/kernel.h  
+デフォルトのログレベルは「4」。
+
+|名前|レベル|エイリアス関数|意味|
+|:---|:---:|:---|:---|
+|KERN_ALERT|1|pr_alert|ユーザが対応する必要がある深刻なエラー|
+|KERN_CRIT|2|pr_cirt|深刻で回復不能なエラー|
+|KERN_ERR|3|pr_err|一般的なエラーメッセージ|
+|KERN_WARNING|4|pr_warning|エラーではないがユーザーに対する警告|
+|KERN_NOTICE|5|pr_notis|エラーではないがユーザにとって重要な情報|
+|KERN_INFO|6|pr_info|ごく一般的な情報|
+|KERN_DEBUG|7|pr_debug|デバッグメッセージ|
+
+現在のシステムのレベルは/proc/sys/kernel/printkで確認できる。
+<pre>
+$ cat /proc/sys/kernel/printk
+3       4       1       3
+</pre>
+左から現在の設定、デフォルトの設定、最小設定、起動時の設定を意味する。
