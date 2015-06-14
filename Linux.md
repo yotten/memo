@@ -68,3 +68,58 @@ $ cat /proc/sys/kernel/printk
 3       4       1       3
 </pre>
 左から現在の設定、デフォルトの設定、最小設定、起動時の設定を意味する。
+
+autoconfをインストール。
+<pre>
+ $ sudo apt-get install autoconf
+</pre>
+ 
+<pre>
+pi@raspberrypi ~/test_hello $ ls
+hello.c
+pi@raspberrypi ~/test_hello $ cat hello.c
+#include <stdio.h>
+
+int main()
+{
+        printf("Hello, World!!\n");
+        return 0;
+}
+</pre>
+
+<pre>
+$ autoscan
+pi@raspberrypi ~/test_hello $ ls
+autoscan.log  configure.scan  hello.c
+
+$ mv configure.scan configure.in
+</pre>
+
+<pre>
+$ aclocal
+pi@raspberrypi ~/test_hello $ ls
+autom4te.cache  autoscan.log  configure.in  hello.c
+</pre>
+
+<pre>
+$ autoconf
+pi@raspberrypi ~/test_hello $ ls
+autom4te.cache  autoscan.log  configure  configure.in  hello.c
+</pre>
+
+<pre>
+$ cat Makefile.am
+bin_PROGRAMS=hello
+hello_SOURCES=hello.c
+</pre>
+
+<pre>
+$ autoheader
+pi@raspberrypi ~/test_hello $ ls
+Makefile.am     autoscan.log  config.log     configure     hello.c
+autom4te.cache  config.h.in   config.status  configure.in
+</pre>
+
+<pre>
+$ touch NEWS README AUTHORS ChangeLog
+</pre>
