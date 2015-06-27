@@ -46,5 +46,5 @@ $(マクロ名) または ${マクロ}
 
 
 #参考：URL  
-http://d.hatena.ne.jp/cou929_la/20090929/1254243607
+http://d.hatena.ne.jp/cou929_la/20090929/1254243607  
 http://www.jsk.t.u-tokyo.ac.jp/~k-okada/makefile/
