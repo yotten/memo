@@ -9,6 +9,13 @@ Status: Downloaded newer image for ubuntu:20.04
 docker.io/library/ubuntu:20.04
 $
 </pre>
+## イメージの一覧を表示する
+<pre>
+$ sudo docker image ls
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+ubuntu       20.04     626a42b93d93   2 weeks ago   72.8MB
+$
+</pre>
 # Linux
 
 ### Linuxの起動と終了
