@@ -1,3 +1,14 @@
+# docker
+## イメージを取得する
+<pre>
+$ sudo docker image pull ubuntu:20.04
+20.04: Pulling from library/ubuntu
+56e0351b9876: Pull complete
+Digest: sha256:f8f658407c35733471596f25fdb4ed748b80e545ab57e84efbdb1dbbb01bd70e
+Status: Downloaded newer image for ubuntu:20.04
+docker.io/library/ubuntu:20.04
+$
+</pre>
 # Linux
 
 ### Linuxの起動と終了
