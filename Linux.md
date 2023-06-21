@@ -59,8 +59,20 @@ For more examples and ideas, visit:
 
 $
 </pre>
-
-
+## 起動中のコンテナを確認
+<pre>
+$ sudo docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+$
+</pre>
+-a オプションを付けて停止中のコンテナも表示
+<pre>
+$ sudo docker ps -a
+CONTAINER ID   IMAGE          COMMAND               CREATED          STATUS                      PORTS     NAMES
+daea1e57f08e   hello-world    "/hello"              5 minutes ago    Exited (0) 5 minutes ago              flamboyant_wozniak
+52a4a39ac6a8   ubuntu:20.04   "echo Hello World!"   18 minutes ago   Exited (0) 18 minutes ago             sweet_jennings
+$
+</pre>
 # Linux
 
 ### Linuxの起動と終了
