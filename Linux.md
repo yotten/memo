@@ -19,7 +19,7 @@ $
 </pre>
 ## イメージを削除する
 <pre>
-$ docker image rm ubuntu:20.04
+$ sudo docker image rm ubuntu:20.04
 </pre>
 ## Docker コンテナを起動する
 <pre>
