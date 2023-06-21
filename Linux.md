@@ -16,6 +16,12 @@ REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
 ubuntu       20.04     626a42b93d93   2 weeks ago   72.8MB
 $
 </pre>
+## イメージを削除する
+<pre>
+$ docker image rm ubuntu:20.04
+</pre>
+
+
 # Linux
 
 ### Linuxの起動と終了
