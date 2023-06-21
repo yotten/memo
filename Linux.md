@@ -20,7 +20,12 @@ $
 <pre>
 $ docker image rm ubuntu:20.04
 </pre>
-
+## Docker コンテナを起動する
+<pre>
+$ sudo docker container run ubuntu:20.04 echo Hello World!
+Hello World!
+$
+</pre>
 
 # Linux
 
