@@ -73,8 +73,8 @@ daea1e57f08e   hello-world    "/hello"              5 minutes ago    Exited (0) 
 52a4a39ac6a8   ubuntu:20.04   "echo Hello World!"   18 minutes ago   Exited (0) 18 minutes ago             sweet_jennings
 $
 </pre>
-docker rm [CONTAINER ID（daea1e57f08e）]でコンテナの削除する
-docker rmi [イメージ名(hello-world)]でイメージを削除する
+* docker rm [CONTAINER ID（daea1e57f08e）]でコンテナの削除する
+* docker rmi [イメージ名(hello-world)]でイメージを削除する
 # Linux
 
 ### Linuxの起動と終了
