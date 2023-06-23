@@ -2,7 +2,7 @@
 参考：https://maku77.github.io/p/y2biqx6/
 ## イメージを取得する
 <pre>
-$ sudo docker image pull ubuntu:20.04
+$ docker image pull ubuntu:20.04
 20.04: Pulling from library/ubuntu
 56e0351b9876: Pull complete
 Digest: sha256:f8f658407c35733471596f25fdb4ed748b80e545ab57e84efbdb1dbbb01bd70e
@@ -12,9 +12,10 @@ $
 </pre>
 ## イメージの一覧を表示する
 <pre>
-$ sudo docker image ls
-REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
-ubuntu       20.04     626a42b93d93   2 weeks ago   72.8MB
+$ docker image ls
+REPOSITORY       TAG       IMAGE ID       CREATED             SIZE
+sample/webrick   latest    d1c7f0169613   About an hour ago   864MB
+ubuntu           20.04     626a42b93d93   2 weeks ago         72.8MB
 $
 </pre>
 ## イメージを削除する
