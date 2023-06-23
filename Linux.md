@@ -75,6 +75,13 @@ $
 </pre>
 * docker rm [CONTAINER ID（daea1e57f08e）]でコンテナの削除する
 * docker rmi [イメージ名(hello-world)]でイメージを削除する
+## sudoを付けないとエラーになる
+<pre>
+$ docker container ls
+permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/json": dial unix /var/run/docker.sock: connect: permission denied
+$
+</pre>
+
 # Linux
 
 ### Linuxの起動と終了
