@@ -1,3 +1,6 @@
+## yoctoベストプラクティス
+参考：https://hub.mender.io/t/yocto-best-practises/5830
+
 ## 変数  
 参考: https://technologicaladvance.blog.fc2.com/blog-entry-174.html  
 ### IMAGE_INSTALL
