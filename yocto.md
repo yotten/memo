@@ -1,3 +1,22 @@
+## 変数  
+参考: https://technologicaladvance.blog.fc2.com/blog-entry-174.html  
+### IMAGE_INSTALL
+自作のソフトウェアを含め、変数に格納されたパッケージをただインストールするというもの  
+`IMAGE_INSTALL += "hogehoge"`
+
+### IMAGE FEATURES  
+予めOpenEmbedded側で定義された機能を追加するための変数。  
+皆が使いそうな便利機能を事前に定義してくれていて、使いたい機能を指定すれば、関連するパッケージのインストールや設定を自動でやってくれるというもの。  
+`IMAGE_FEATURES_append = " ssh-server-openssh"`
+
+### DISTRO_FEATURES
+予め指定された機能の中から、使用したい機能を選択して代入する。  
+そうすることで、その機能を実現するための複数のパッケージをインストールしてくれます。  
+さらに、ここで指定した機能は、ディストリビューション全体に渡って有効化されます。
+例えば、DISTRO_FEATURESでx11を有効化した場合、X11をサポートできるすべてのソフトウェアでx11サポートが有効化されます。  
+
+### CORE_IMAGE_EXTRA_INSTALL
+
 <details>
 <summary>core-image-minimalの起動ログ</summary>
 <pre>
