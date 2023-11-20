@@ -1,3 +1,82 @@
+# BitBakeの実践ガイド
+参考：[A practical guide to BitBake](https://a4z.gitlab.io/docs/BitBake/guide.html)
+
+## 前書き
+## BitBake
+## BitBakeのセットアップ
+参考：[BitBake User Manual](https://docs.yoctoproject.org/bitbake/singleindex.html)  
+<pre>
+export PATH=/path/to/bbtutor/bitbake/bin:$PATH
+export PYTHONPATH=/path/to/bbtutor/bitbake/lib:$PYTHONPATH
+</pre>
+pokyの中にある、bitbakeを使用する。  
+<pre>
+export PATH=~/myyocto/poky/bitbake/bin:$PATH
+export PYTHONPATH=~/myyocto/poky/bitbake/lib:$PYTHONPATH
+</pre>
+
+## プロジェクトの生成
+<pre>
+bbTutorial/
+├── build
+│   ├── bitbake.lock
+│   └── conf
+│       └── bblayers.conf
+└── meta-tutorial
+    ├── classes
+    │   └── base.bbclass
+    └── conf
+        ├── bitbake.conf
+        └── layer.conf
+</pre>
+buildディレクトリは作業ディレクトリになり、好きな名前を付けることができますが、名前をbuildで始めるのが良い。  
+
+
+* bblayers.conf  
+  BitBake が最初に期待するファイルは、作業ディレクトリの conf/bblayers.conf です。 これはビルドディレクトリです。  
+<pre>
+BBPATH := "${TOPDIR}"  
+BBFILES ?= ""  
+BBLAYERS = "${TOPDIR}/../meta-tutorial"
+</pre>
+
+* base.bbclass  
+  https://github.com/openembedded/bitbake から取得
+
+* bitbake.conf  
+  https://github.com/openembedded/bitbake から取得
+  
+* layer.conf
+<pre>
+BBPATH .= ":${LAYERDIR}"
+BBFILES += "${LAYERDIR}/recipes-*/*/*.bb"
+</pre>
+上記で実行する。
+`bitbake`  
+設定が正しければ現状以下が出力される。  
+<pre>
+Nothing to do.  Use 'bitbake world' to build everything, or run 'bitbake --help' for usage information.
+</pre>
+デバッグ出力する。  
+<pre>
+$ bitbake -vDDD world
+NOTE: Cache: default: Not using a cache. Set CACHE = <directory> to enable.
+Loading cache: 100% |                                                                                                        | ETA:  --:--:--
+Loaded 0 entries from dependency cache.
+DEBUG: collating packages for "world"
+DEBUG: Target list: []
+NOTE: Resolving any missing task queue dependencies
+DEBUG: Resolved 0 extra dependencies
+$
+</pre>
+## 最初のレシピ
+## クラスとファンクション
+## BitBake layers
+## 構成の共有と再利用
+## 変数の使用
+## 概要
+
+
 ## yoctoベストプラクティス
 参考：https://hub.mender.io/t/yocto-best-practises/5830
 
