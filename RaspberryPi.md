@@ -40,8 +40,15 @@ pi@raspberrypi ~ $ ls -lh /boot/kernel7.img
 -rwxr-xr-x 1 root root 3.8M  2月 15  2015 /boot/kernel7.img
 pi@raspberrypi ~ $
 ```
-カーネル・サイズ：3.8Mバイト
+カーネル・サイズ：3.8Mバイト  
 
+Raspbianのパッケージ・マネージャーでインストール済みのリストを確認
+```
+pi@raspberrypi ~ $ dpkg --list | wc -l
+921
+pi@raspberrypi ~ $
+```
+見出し行を含んでいるが900ほど入っている
 # LinuxPC上にビルドツリーを作成する
 カーネルのビルドに必要なツールをインストール。
 <pre>
